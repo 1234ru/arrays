@@ -1,0 +1,10 @@
+{
+  "name": "one234ru/arrays",
+  "description": "PHP tool for working with arrays",
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {
+      "One234ru\\": "."
+    }
+  }
+}
