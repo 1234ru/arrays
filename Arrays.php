@@ -82,4 +82,20 @@ class Arrays
             array_fill_keys($keys, true)
         );
     }
+
+    /** Converts array of any depth to simple list with numeric keys. */
+    public static function flatten(array $array)
+    {
+        $fn = __FUNCTION__;
+        $flat = [];
+        foreach ($array as $value) {
+            if (!is_array($value)) {
+                $flat[] = $value;
+            } else {
+                array_push($flat, ...self::$fn($value));
+            }
+        }
+        return $flat ?? [];
+    }
+
 }
