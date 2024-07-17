@@ -76,4 +76,10 @@ class Arrays
         );
     }
 
+    public static function dropKeys($array, $keys) {
+        return array_diff_key(
+            $array,
+            array_fill_keys($keys, true)
+        );
+    }
 }
